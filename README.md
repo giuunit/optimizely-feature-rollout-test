@@ -44,3 +44,4 @@ this project highlights the steps to enable the plugin using Optimizely Rollout 
 - For the sake of this tutorial, we didn't enable production rollout. It is possible to do it as well using transform files and a separate sdk key.
 - The code available in this project is for demonstration purposes. It is not production-ready.
 - As we are using a variable for the page, it is possible to switch between facebook pages when deploying, as long as the new facebook page is configured to allow the url at that set up during step 3.
+- For debugging purposes, the code is available in the _ViewStart.cshtml file and on github at the following url: https://github.com/giuunit/optimizely-feature-rollout-test/blob/main/OptimizelyFeatureRolloutTest/OptimizelyFeatureRolloutTest/Views/_ViewStart.cshtml
