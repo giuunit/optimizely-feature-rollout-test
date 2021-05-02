@@ -4,7 +4,7 @@ Test application to enable Optimizely Feature Rollout capabilities to deploy a M
 
 The template is a standard ASP.NET MVC application using .net Framework 4.8 
 
-## What is the goal of the application ? ** 
+## What is the goal of the application ?
 
 This application is an example of project using Optimizely to rollout a feature for a web project. 
 
