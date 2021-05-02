@@ -1,8 +1,21 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //setting up Optimizely - code in razor for the sake of the demo;
+    var optimizelyClient = OptimizelySDK.OptimizelyFactory.NewDefaultInstance(System.Configuration.ConfigurationManager.AppSettings["Optimizely:sdkKey"]);
+
+    //for the sake of the demo we will test for all users
+    var user = optimizelyClient.CreateUserContext("");
+
+    //feature flag
+    var decision = user.Decide("enable_messenger_chat");
+    var enableMessengerChat = decision.Enabled;
+
+    //retrieving the page id
+    var pageId = decision.Variables.GetValue<string>("page_id");
 }
 
-@if (MvcApplication.EnableMessengerChat)
+@if (enableMessengerChat)
 {
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
@@ -26,6 +39,6 @@
     <!-- Your Chat Plugin code -->
     <div class="fb-customerchat"
          attribution="biz_inbox"
-         page_id="106580551589279">
+         page_id="@pageId">
     </div>
 }
