@@ -15,7 +15,7 @@
     var pageId = decision.Variables.GetValue<string>("page_id");
 }
 
-@if (enableMessengerChat)
+@if (enableMessengerChat & !string.IsNullOrWhiteSpace(pageId))
 {
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
