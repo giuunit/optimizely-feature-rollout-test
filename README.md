@@ -11,9 +11,6 @@ This application is an example of project using Optimizely to rollout a feature 
 I picked the **Facebook Messenger Chat Plugin** as it is valuable for businesses to enable chat / customer support abilities for their website and 
 this project highlights the steps to enable the plugin using Optimizely Rollout capabilities.
 
-**Disclaimer**
-
-The code available below is for demonstration purposes. It is not production-ready. 
 
 ## How to run the project ? 
 
@@ -45,3 +42,4 @@ The code available below is for demonstration purposes. It is not production-rea
 
 - Steps 8 & 9 are mandatory as the messenger web plugin requires a proper url & doesn't accept 'localhost' as url.
 - For the sake of this tutorial, we didn't enable production rollout. It is possible to do it as well using transform files and a separate sdk key.
+- The code available in this project is for demonstration purposes. It is not production-ready.
