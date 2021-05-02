@@ -9,6 +9,7 @@ namespace OptimizelyFeatureRolloutTest
     public class MvcApplication : System.Web.HttpApplication
     {
         public static bool EnableMessengerChat { get; private set; }
+        public static string MessengerPageId { get; private set; }
 
         protected void Application_Start()
         {
@@ -21,7 +22,11 @@ namespace OptimizelyFeatureRolloutTest
             var optimizelyClient = OptimizelyFactory.NewDefaultInstance(ConfigurationManager.AppSettings["Optimizely:sdkKey"]);
             
             //for the sake of the demo we will test for all users
-            EnableMessengerChat = optimizelyClient.IsFeatureEnabled("enable_messenger_chat", "");
+            var user = optimizelyClient.CreateUserContext("");
+
+            var decision = user.Decide("enable_messenger_chat");
+            EnableMessengerChat = decision.Enabled;
+            MessengerPageId = decision.Variables.GetValue<string>("page_id");
         }
     }
 }
