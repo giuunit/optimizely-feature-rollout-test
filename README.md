@@ -9,7 +9,7 @@ The template is a standard ASP.NET MVC application using .net Framework 4.8
 This application is an example of project using Optimizely to rollout a feature for a web project. 
 
 I picked the **Facebook Messenger Chat Plugin** as it is valuable for businesses to enable chat / customer support abilities for their website and 
-this project highlights the steps to enable the plugin using Optimizely Rollout capabilities. 
+this project highlights the steps to deploy the plugin using Optimizely Rollout capabilities. 
 
 
 ## How to run the project ? 
