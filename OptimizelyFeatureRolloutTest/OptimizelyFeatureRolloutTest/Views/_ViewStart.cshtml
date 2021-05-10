@@ -4,7 +4,6 @@
     //setting up Optimizely;
     var optimizelyClient = OptimizelySDK.OptimizelyFactory.NewDefaultInstance(System.Configuration.ConfigurationManager.AppSettings["Optimizely:sdkKey"]);
 
-    //for the sake of the test project
     var user = optimizelyClient.CreateUserContext("");
 
     //feature flag
