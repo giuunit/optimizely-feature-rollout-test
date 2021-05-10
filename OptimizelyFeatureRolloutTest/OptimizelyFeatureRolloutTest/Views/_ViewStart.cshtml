@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-    //setting up Optimizely - code in razor for the sake of the demo;
+    //setting up Optimizely;
     var optimizelyClient = OptimizelySDK.OptimizelyFactory.NewDefaultInstance(System.Configuration.ConfigurationManager.AppSettings["Optimizely:sdkKey"]);
 
     //for the sake of the demo we will test for all users
